@@ -35,11 +35,3 @@ The api will reload if you make code changes.
 
 Launches the test runner in the interactive watch mode.<br>
 Use `yarn test:ci` to run all the tests and exit.
-
-## Bonus points
-
-- Use typescript
-- Async parallel requests to the API
-- Testing
-- Input validation
-- Proper error handling + http status codes
