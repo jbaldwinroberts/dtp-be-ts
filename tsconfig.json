@@ -7,7 +7,8 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "preserveSymlinks": true
+    "preserveSymlinks": true,
+    "allowJs": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]

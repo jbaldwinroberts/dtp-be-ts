@@ -1,4 +1,4 @@
-service: marketing-interview-backend
+service: canopy-interview-backend
 
 plugins:
   - serverless-dotenv-plugin
@@ -6,7 +6,6 @@ plugins:
   - serverless-offline
 
 custom:
-  novenueBucketName: 'marketing-interview-backend-${self:provider.stage}'
   webpack:
     webpackConfig: webpack.config.js
     includeModules:
@@ -14,12 +13,6 @@ custom:
         - aws-sdk
     packager: 'yarn'
     excludeFiles: src/**/*.test.[t|j]s
-  local:
-    frontend_url: 'http://localhost:8000'
-  dev:
-    frontend_url: 'https://dev.activekids.cmdtests.com'
-  prod:
-    frontend_url: 'https://activekids.sainsburys.co.uk'
 
 provider:
   name: aws

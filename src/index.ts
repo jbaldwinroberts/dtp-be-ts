@@ -4,10 +4,9 @@ import {
   Handler,
 } from 'aws-lambda'
 
-const handler: Handler<
-  APIGatewayProxyEvent,
-  APIGatewayProxyResult
-> = async event => {
+const handler: Handler<APIGatewayProxyEvent, APIGatewayProxyResult> = async (
+  event
+) => {
   return {
     headers: {
       'Content-Type': 'application/json',
