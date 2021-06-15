@@ -5,7 +5,7 @@ import {
 } from 'aws-lambda'
 
 const handler: Handler<APIGatewayProxyEvent, APIGatewayProxyResult> = async (
-  event
+  event: APIGatewayProxyEvent
 ) => {
   return {
     headers: {
