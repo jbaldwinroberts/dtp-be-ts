@@ -12,6 +12,8 @@ custom:
         - aws-sdk
     packager: 'yarn'
     excludeFiles: src/**/*.test.[t|j]s
+  serverless-offline:
+    noPrependStageInUrl: true
 
 provider:
   name: aws
