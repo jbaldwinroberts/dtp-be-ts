@@ -7,28 +7,29 @@ Create an API which returns a list of movies or TV shows based on a search query
 You can use [TMDb REST API](https://www.themoviedb.org/documentation/api) as a data source. The API key
 `c857fa67fba523ad3ce66df18e7ab279` has already been created for use in the task.
 
-For each film or TV program, return:
-
-- ID
-- Title
-- Overview
-- Type (movie or TV)
-
-1. Add support for searching both TV and movies
-   - Searching for "The Simpsons" will return both the TV show and the movie
-   - Likewise for "SpongeBob"
 1. Add support for searching for movies only
-   - if I search for "The Simpsons", I should get back The Simpsons movie, but _not_ the TV show
-1. Add support for searching for TV shows only
-   - Searching for "The Simpsons" should return only the TV show, _not_ the movie
-1. Implement a cache
-1. Add a "runtime" field to the results
+   - Response should include:
+     - ID
+     - Title
+     - Overview
+2. Add support for searching for TV shows only
+   - Response should include:
+     - ID
+     - Title
+     - Overview
+3. Add support for searching both TV and movies
+   - Respond with same as above but with an additional "type" field
+4. Implement a cache
+5. Add a "runtime" field to the response
 
 ### Request examples
 
-- `/?query=Scott%20Pilgrim`
-- `/?type=movies&query=Hitchhiker's%20Guide`
+- `/?query=The%20Simpsons`
+  - Should return matching TV shows and movies
+- `/?type=movies&query=SpongeBob`
+  - Should return only movies
 - `/?type=tvshows&query=The%20Office`
+  - Should return only TV shows
 
 ## Running the server
 
