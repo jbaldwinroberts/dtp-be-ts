@@ -1,7 +1,6 @@
 service: canopy-interview-backend
 
 plugins:
-  - serverless-dotenv-plugin
   - serverless-webpack
   - serverless-offline
 
@@ -24,10 +23,10 @@ provider:
     STAGE: ${self:provider.stage}
 
 functions:
-  movieSearch:
+  mediaSearch:
     handler: src/index.default
     events:
       - http:
-          path: /media_search
+          path: /
           method: get
           cors: true
