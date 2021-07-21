@@ -1,4 +1,4 @@
-# Sainsbury's Marketing back-end test
+# Sainsbury's Node/TypeScript back-end test
 
 ## Instructions
 
