@@ -17,7 +17,7 @@ custom:
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   memorySize: 128
   stage: ${opt:stage, "local"}
   region: eu-west-1
