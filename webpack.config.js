@@ -1,5 +1,6 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path')
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const slsw = require('serverless-webpack')
 
 module.exports = {
@@ -23,8 +24,11 @@ module.exports = {
   },
   module: {
     rules: [
-      // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
-      { test: /\.[jt]s/, loader: 'ts-loader' },
+      {
+        test: /\.[jt]s$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+      },
     ],
   },
 }
