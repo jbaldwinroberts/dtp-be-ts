@@ -1,7 +1,7 @@
 {
   "name": "canopy-interview-backend",
   "version": "1.0.0",
-  "description": "Interview task for back-end (TypeScript)",
+  "description": "Interview task for back-end (TypeScript, Serverless)",
   "main": "",
   "repository": "https://github.com/JSainsburyPLC/canopy-interview-backend.git",
   "license": "",
@@ -31,7 +31,6 @@
     "start": "serverless offline --stage local",
     "test": "jest --watchAll",
     "clean": "rm -rf ./dist ./node_modules yarn-*.log",
-    "lint": "eslint 'src/**/*.{j,t}s'",
     "format": "prettier -w src",
     "format:readme": "prettier -w README.md"
   }

@@ -2,34 +2,44 @@
 
 ## Instructions
 
-Create an API which returns a list of movies or TV shows based on a search query.
+We have created an API which returns data for movies based on a search query. A user can search for e.g. `the simpsons`
+and will get back the ID, title and overview for each match.
 
-You can use [TMDb REST API](https://www.themoviedb.org/documentation/api) as a data source. The API key
+We use [TMDb REST API](https://www.themoviedb.org/documentation/api) as a data source. The API key
 `c857fa67fba523ad3ce66df18e7ab279` has already been created for use in the task.
 
-1. Add support for searching for movies only
+The goal of the task is to extend the API with the following features:
+
+1. Add support for searching for TV shows only
    - Response should include:
      - ID
      - Title
      - Overview
-2. Add support for searching for TV shows only
-   - Response should include:
-     - ID
-     - Title
-     - Overview
-3. Add support for searching both TV and movies
-   - Respond with same as above but with an additional "type" field
-4. Implement a cache
-5. Add a "runtime" field to the response
+2. Add support for searching both TV and movies
+   - Respond with same as above but with an additional "type" field to differentiate results
+3. Add the IMDB URL for each item in the search results
+
+Additionally, please bear in mind the following improvements and changes which you may also implement:
+
+- Add type definitions for TMDB API search results, our own response type, anywhere else you see fit
+- Refactor the search request so the API key is not hardcoded
+- Add error handling e.g. when there are no results, when there is a network error, invalid query or API key, etc
+- Improve reliability of tests
+- Result pagination
+- Cache search results
+
+Please feel free to suggest and make any other improvements you can identify.
 
 ### Request examples
 
-- `/?query=The%20Simpsons`
-  - Should return matching TV shows and movies
-- `/?type=movies&query=SpongeBob`
-  - Should return only movies
-- `/?type=tvshows&query=The%20Office`
-  - Should return only TV shows
+- `http://localhost:3000/?query=The%20Simpsons`
+- `http://localhost:3000/?type=movies&query=SpongeBob`
+- `http://localhost:3000/?type=tvshows&query=The%20Office`
+
+## Architecture
+
+The API is powered by a lambda function which is behind API Gateway. The function is configured and deployed by the
+[Serverless framework](https://www.serverless.com/framework/docs).
 
 ## Running the server
 
