@@ -1,7 +1,5 @@
 # Sainsbury's Node/TypeScript back-end test
 
-**Trial with Rajesh**
-
 We have created an API which returns data for movies based on a search query. A user can search for e.g. `the simpsons`
 and will get back the ID, title and overview for each match.
 
@@ -20,7 +18,6 @@ observation!**
 - Given a user searches for a movie ("the simpsons")
 - Then a response is returned that contains the movie title, ID and overview
 
-
 - Given a user searches for a movie ("foobarbazbat")
 - And that movie does not exist
 - Then an empty response is returned
@@ -30,11 +27,9 @@ observation!**
 - Given a user searches for a TV show ("the office")
 - Then a response is returned that contains the title, ID, overview
 
-
 - Given a user searches for a TV show ("foobarbazbat")
 - And that TV show does not exist
 - Then an empty response is returned
-
 
 - Given a user searches for either a movie or TV show ("the simpsons")
 - Then a response is returned that contains the title, ID, overview and type ("movie" or "tv")
@@ -59,7 +54,8 @@ We use [TMDb REST API](https://developers.themoviedb.org/3) as a data source. Th
 
 ## Running the server
 
-You can start the server with `yarn start`. It should watch for changes and restart when files are changed.
+You can start the server with `yarn start`. It should watch for changes and restart when files are changed. The server
+will start listening on port 3000, and you can make requests such as `http://localhost:3000/?query=the%20matrix`.
 
 ## Testing
 
